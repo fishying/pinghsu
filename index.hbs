@@ -1,0 +1,33 @@
+{{!< default}}
+{{#contentFor 'pageScripts'}}
+<script>
+var article = {
+    origin: 'top',
+    delay    : 150,
+    easing   : 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+    rotate   : { x: 5 },
+    opacity: 0,
+    scale: 1
+};
+window.sr = ScrollReveal().reveal('article.article, .article-header, .article-excerpt, .article-meta, .pagination', article, 50)
+</script>
+{{/contentFor}}
+<header id="main-header" class="bg-white">
+    <nav class="navbar-container">
+        <a class="navbar-logo" href="{{blog.url}}">
+            {{#if blog.logo}}
+                <img src="{{blog.logo}}" alt="{{blog.title}}" />
+            {{/if}}
+            {{blog.title}}
+        </a>
+        {{#if blog.navigation}}
+            <ul class="test">123</ul>
+        {{/if}}
+    </nav>
+</header>
+<main id="content" class="content" role="main">
+    <article class="body">
+        {{> loop}}
+    </article>
+    {{> pagination}}
+</main>
