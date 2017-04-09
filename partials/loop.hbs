@@ -2,16 +2,20 @@
     {{#each article}}
         <article class="article-item">
             <div class="article-item-container">
+                {{#if cover}}
+                    <a href="/{{slug}}">
+                        <div class="article-item-cover">
+                            <div class="img" style="background-image:url({{cover}});"></div>
+                        </div>
+                    </a>
+                {{/if}}
                 <header class="article-header">
-                    <h2 class="article-title"><a href="/{{slug}}">{{title}}</a></h2>
+                    <h3 class="article-title"><a href="/{{slug}}">{{title}}</a></h3>
                 </header>
-                <section class="article-excerpt">
-                    <p>
-                        {{excerpt tailor=120}}
-                    </p>
-                </section>
-                <footer class="article-meta">
-                    {{#if author.avatar}}<img class="author-thumb" src="{{author.avatar}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
+                <section class="article-meta">
+                    {{#if author.avatar}}
+                        <img class="author-thumb" src="{{author.avatar}}" alt="{{author.name}}" nopin="nopin" />
+                    {{/if}}
                     <span>{{author.name}}</span>
                     {{#if tag.length}}
                         on
@@ -20,7 +24,13 @@
                         {{/each}}
                     {{/if}}
                     <time class="article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date now=true}}</time>
-                </footer>
+                </section>
+                <div class="item-meta-hr"></div>
+                <section class="article-excerpt">
+                    <p>
+                        {{excerpt tailor=80}}
+                    </p>
+                </section>
             </div>
         </article>
     {{/each}}

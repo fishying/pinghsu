@@ -13,20 +13,25 @@ window.sr = ScrollReveal()
 sr.reveal('.article-header, .article-meta, .article-content', article, 150)
 </script>
 {{/contentFor}}
-
-<header class="main-header article-head {{#if article.cover}}" style="background-image: url({{article.cover}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav overlay clearfix">
-        {{#if blog.logo}}
-            <a class="blog-logo" href="/"><img src="{{blog.logo}}" alt="{{blog.title}}" /></a>
+<header id="main-header" class="bg-white">
+    <nav class="navbar-container">
+        <a class="navbar-logo" href="{{blog.url}}">
+            {{#if blog.logo}}
+                <img src="{{blog.logo}}" alt="{{blog.title}}" />
+            {{/if}}
+            {{blog.title}}
+        </a>
+        {{#if blog.navigation}}
+            <ul class="test">123</ul>
         {{/if}}
     </nav>
 </header>
 
-<main class="content" role="main">
+<main id="content" class="content" role="main">
     <article class="article">
 
         <header class="article-header">
-            <h1 class="article-title">{{article.title}}</h1>
+            <h3 class="article-title">{{article.title}}</h3>
             <section class="article-meta">
                 {{#if article.author.avatar}}<img class="author-thumb" src="{{article.author.avatar}}" alt="{{article.author.name}}" nopin="nopin" />{{/if}}
                 <span>{{article.author.name}}</span>
