@@ -144,8 +144,8 @@ h4, h5, h6 {
     -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     color: #2E2E2E;
-    line-height: 1.15em;
-    margin: 0 0 0.4em 0;
+    margin: 20px 0;
+    font-weight: 500;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
              "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
              SimSun, sans-serif;
@@ -153,31 +153,31 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: 4.6rem;
+    font-size: 28px;
     letter-spacing: -2px;
     text-indent: -3px;
 }
 
 h2 {
-    font-size: 3.2rem;
+    font-size: 26px;
     letter-spacing: -1px;
 }
 
 h3 {
-    font-size: 2.4rem;
+    font-size: 24px;
     letter-spacing: -0.6px;
 }
 
 h4 {
-    font-size: 2.2rem;
+    font-size: 22px;
 }
 
 h5 {
-    font-size: 1.8rem;
+    font-size: 22px;
 }
 
 h6 {
-    font-size: 1.8rem;
+    font-size: 22px;
 }
 
 a {
@@ -196,6 +196,7 @@ p, ul, ol, dl {
     -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     margin: 0 0 1.75em 0;
     text-rendering: geometricPrecision;
+    font-size: 16px;
 }
 
 ol, ul {

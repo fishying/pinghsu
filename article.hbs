@@ -27,11 +27,10 @@ sr.reveal('.article-header, .article-meta, .article-content', article, 150)
     </nav>
 </header>
 
-<main id="content" class="content" role="main">
+<main id="content" class="content" role="article">
     <article class="article">
-
         <header class="article-header">
-            <h3 class="article-title">{{article.title}}</h3>
+            <h1 class="article-title">{{article.title}}</h1>
             <section class="article-meta">
                 {{#if article.author.avatar}}<img class="author-thumb" src="{{article.author.avatar}}" alt="{{article.author.name}}" nopin="nopin" />{{/if}}
                 <span>{{article.author.name}}</span>

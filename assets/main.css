@@ -50,6 +50,9 @@
 /**
  * body
  */
+ h1.article-title {
+     font-size: 3.2rem;
+ }
 
 
 /* article-list */
@@ -115,4 +118,14 @@ main#content {
     max-width: 100%;
     margin: 0;
     padding: 70px 0 0;
+}
+
+article.article {
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 70px 20px 65px;
+}
+article.article section.article-content a {
+    color: #3c93ff;
 }
